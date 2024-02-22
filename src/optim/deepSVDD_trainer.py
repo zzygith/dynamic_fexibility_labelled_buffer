@@ -100,8 +100,11 @@ class DeepSVDDTrainer(BaseTrainer):
             for data in train_loader:
                 inputs, _, _ = data
                 inputs = inputs.to(self.device)
-                inputsTimeTheta=inputs[:,0:4]
-                inputsTimeFlag=inputs[:,4:5]
+                # #4d
+                # inputsTimeTheta=inputs[:,0:4]
+                # inputsTimeFlag=inputs[:,4:5]
+                inputsTimeTheta=inputs[:,0:-1]
+                inputsTimeFlag=inputs[:,-1:]
                 inputsTheta=inputs.cpu().detach().numpy()
                 #inputsTheta=inputsTheta.flatten()[0]
                 #logger.info(inputsTimeFlag)
