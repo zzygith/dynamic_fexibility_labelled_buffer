@@ -12,7 +12,7 @@ class MINE_netBuffer10D(BaseNet):
 
         #2d: 15
         #20: 50
-        rep = 64
+        rep = 128
         output_dim=16
         #output_dim=15
         self.rep_dim = output_dim
