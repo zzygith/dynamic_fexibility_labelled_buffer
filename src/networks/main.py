@@ -5,6 +5,7 @@ from .mine_net3 import MINE_net3
 from .mine_net1D import MINE_net1D
 from .mine_netRC2D import MINE_netRC2D
 from .mine_netBuffer4D import MINE_netBuffer4D
+from .mine_netBuffer10D import MINE_netBuffer10D
 
 def build_network(net_name):
     """Builds the neural network."""
@@ -32,7 +33,10 @@ def build_network(net_name):
 
     if net_name == 'mine_netBuffer4D':
         net = MINE_netBuffer4D()
-                
+
+    if net_name == 'mine_netBuffer10D':
+        net = MINE_netBuffer10D()                
+
     return net
 
 
